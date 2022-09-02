@@ -69,22 +69,11 @@
             <!-- Control sidebar content goes here -->
         </aside>
         <!-- /.control-sidebar -->
-        @include('sweetalert::alert')
+
     </div>
     <!-- ./wrapper -->
 
-    <script src="{{ asset('assets/admin/js/adminlte.js') }}"></script>
-    <script>
-        $('.nav-sidebar a').each(function() {
-            let location = window.location.protocol + '//' + window.location.host + window.location.pathname;
-            let link = this.href;
-            if (link == location) {
-                $(this).addClass('active');
-                $(this).closest('.has-treeview').addClass('menu-open');
-            }
-        });
-    </script>
-    @stack('scripts')
+    @include('components.footer')
 
 </body>
 
